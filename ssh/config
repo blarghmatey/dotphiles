@@ -28,3 +28,18 @@ Host *
     #ControlPath ~/.ssh/master/%r@%h:%p
     #ControlPersist 8h
 
+Host techtv.mit.edu
+    ForwardAgent yes
+    GSSAPIAuthentication yes
+
+Host ttv.mit.edu
+    ForwardAgent yes
+    GSSAPIAuthentication yes
+
+Host techtv-dev.mit.edu
+    ForwardAgent yes
+    GSSAPIAuthentication yes
+
+Host ttv-dev.mit.edu
+    ForwardAgent yes
+    GSSAPIAuthentication yes

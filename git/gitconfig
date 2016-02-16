@@ -18,14 +18,14 @@
     merge = refs/heads/master
 
 [color]
-    branch = always
-    diff = always
-    grep = always
-    interactive = always
+    branch = true
+    diff = true
+    grep = true
+    interactive = true
     pager = true
     showbranch = auto
     status = auto
-    ui = always
+    ui = true
 
 [color "interactive"]
     error = red bold
@@ -146,3 +146,6 @@
 [url "git@github.com:"]
     insteadof = github:
 
+[user]
+	name = Tobias Macey
+	email = tmacey@mit.edu

@@ -10,3 +10,11 @@
 
 # Customize to your needs...
 
+source ~/.xsh
+source /usr/share/chruby/chruby.sh
+
+for rbversion in $(ls ~/.gem/ruby/)
+do
+    PATH=~/.gem/ruby/$rbversion/bin:$PATH
+done
+export PATH=$PATH
