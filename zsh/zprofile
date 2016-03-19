@@ -1,3 +1,4 @@
+# -*- mode: shell-script -*-
 #
 # dotphiles : https://github.com/dotphiles/dotphiles
 #
@@ -11,10 +12,15 @@
 # Customize to your needs...
 
 source ~/.xsh
-source /usr/share/chruby/chruby.sh
 
-for rbversion in $(ls ~/.gem/ruby/)
-do
-    PATH=~/.gem/ruby/$rbversion/bin:$PATH
-done
-export PATH=$PATH
+ssh-add -L &> /dev/null
+if [ $? -eq 0 ]
+then
+    echo 'Identities loaded'
+else
+    ssh-add ~/.ssh/{id_rsa,odl_app,odl_rsa} &> /dev/null
+fi
+
+alias edit="emacsclient -t $@"
+alias newpw='copyq add "$(openssl rand -base64 32)"'
+alias fix-ext-display="rm -i ~/local/share/kscreen/*"
