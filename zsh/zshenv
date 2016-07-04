@@ -21,3 +21,4 @@ source "$DOTZSH/env.zsh"
 export EDITOR='/usr/local/bin/emacsclient -c -t -a emacs'
 export VISUAL='/usr/local/bin/emacsclient -c -a emacs'
 export PAGER='less -i'
+export VAGRANT_DEFAULT_PROVIDER='libvirt'

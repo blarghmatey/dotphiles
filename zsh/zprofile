@@ -24,3 +24,11 @@ fi
 alias edit="emacsclient -t $@"
 alias newpw='copyq add "$(openssl rand -base64 32)"'
 alias fix-ext-display="rm -i ~/local/share/kscreen/*"
+
+[[ -s $HOME/.pythonz/etc/bashrc  ]] && source $HOME/.pythonz/etc/bashrc
+
+mypath=$PATH
+for pathname in $(ls ~/.pythonz/pythons/);
+do
+    export PATH="$PATH:/home/tmacey/.pythonz/pythons/$pathname/bin"
+done

@@ -38,7 +38,7 @@ zstyle ':dotzsh:load' dzmodule \
   'zaw' \
   'grc' \
   'mercurial' \
-  'node' \
+  'node'
 
 ### Global settings
 # Color output (auto set to 'no' on dumb terminals).
@@ -129,3 +129,5 @@ alias grep="/usr/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="~/.cask/bin/:$PATH"
+export PATH="~/.local/bin:$PATH"
